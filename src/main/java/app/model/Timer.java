@@ -1,7 +1,11 @@
 package app.model;
 
-public class Timer {
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
+@Scope("singleton")
+@Component
+public class Timer {
     private Long nanoTime = System.nanoTime();
 
     public Long getTime() {
